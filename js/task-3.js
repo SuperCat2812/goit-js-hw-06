@@ -1,18 +1,19 @@
 class StringBuilder {
+  #value;
   constructor(value) {
-    this.value = value;
+    this.#value = value;
   }
   getValue() {
-    return this.value;
+    return this.#value;
   }
   padStart(value) {
-    this.value = value + this.value;
+    this.#value = value + this.#value;
   }
   padEnd(value) {
-    this.value += value;
+    this.#value += value;
   }
   padBoth(value) {
-    this.value = value + this.value + value;
+    this.#value = value + this.#value + value;
   }
 }
 const builder = new StringBuilder('.');
